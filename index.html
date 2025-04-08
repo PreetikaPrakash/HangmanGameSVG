@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet " href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Hangman</button>
+      <small>Find the hidden word - Enter a letter</small>
+      <svg height="250" width="200" class="figure-container">
+        <!-- bar -->
+        <line x1="60" y1="20" x2="140" y2="20"></line>
+        <line x1="140" y1="20" x2="140" y2="50"></line>
+        <line x1="60" y1="20" x2="60" y2="230"></line>
+        <line x1="20" y1="230" x2="100" y2="230"></line>
+        <!-- head -->
+        <circle cx="140" cy="70" r="20" class="figure-part"></circle>
+        <!-- body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part"></line>
+        <!-- arms -->
+        <line x1="140" y1="120" x2="110" y2="90" class="figure-part"></line>
+        <line x1="140" y1="120" x2="170" y2="90" class="figure-part"></line>
+        <!-- legs -->
+        <line x1="140" y1="150" x2="110" y2="180" class="figure-part"></line>
+        <line x1="140" y1="150" x2="170" y2="180" class="figure-part"></line>
+      </svg>
+      <!-- Container for wrong letter displayed on right -->
+      <div class="wrong-letters-container">
+        <div id="wrong-letters"></div>
+      </div>
+      <!-- Space for entering letters -->
+      <div class="word" id="word"></div>
+      <!-- Container for final message -->
+      <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 id="final-message"></h2>
+          <button id="play-button" class="play-button">Play again</button>
+        </div>
+      </div>
+      <!-- Bottom Notification -->
+      <div class="notification-container" id="notifcation-container">
+        <p>You have already entered the letter</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
